@@ -117,6 +117,21 @@ se da click en la pestaña de Hosting y siguen los pasos de Firebase
 	Modificamos el archivo yml con los cambios que necesitamos
 	Ejecutamos firebase login:ci para que nos abra el navegador, nos autenticamos y nos genera un token
 	En github vamos a settings-secrets y creamos uno nuevo llamado FIREBASE_TOKEN y pegamos allí el token generado en el paso anterior
+	En el proyecto cada que subamos cambios se ejecutarán las acciones
+	En github en la pestaña actions se ven las acciones en ejecución
+	en firebase se verán los despliegues y la URL generada
+
+
+Cloudfare
+****************
+Namecheap es un buscador de dominios platziconf.xyz
+
+
+React Helmet (SEO)
+*********************
+instalamos con sudo npm i react-helmet --save
+se importa Helmet en el contenedor que querramos hacer SEO
+Agregamos Helmet y dentro de este el title y las etiquetas meta que queramos
 
 
 
