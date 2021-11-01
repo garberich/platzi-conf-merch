@@ -1,0 +1,115 @@
+Iniciar proyecto
+******************
+Carpeta nueva con el nombre del proyecto, luego iniciamos el repo con git init y luego iniciamos el proyecto npm con npm init -y
+instalamos react con npm i react react-dom
+creamos la carpeta src
+creamos la carpeta public
+dentro de src creamos index.js
+dentro de src creamos la carpeta de components
+dentro de la carpeta components creamos el primer componente App.jsx
+dentro de la carpeta public creamos el archivo index.html
+
+WebPack
+*************
+Instalamos webpack con npm i webpack webpack-cli webpack-dev-server --save-dev
+Instalamos 2 loaders (plugins) de webpack con npm i html-webpack-plugin html-loader
+	Se usan al momento de preparar el proyecto y para leer un archivo html que se va a modificar y lo va a mandar a la carpeta dist donde se va a mandar el proyecto a produccion
+	Este archivo debe ser manipulado y manejado por medio de webpack para prepararlo
+Instalamos babel con npm i babel-loader @babel/preset-env @babel/preset-react @babel/core --save-dev
+	Babel interpreta todas las caracteristicas de javascript para que en el momento de compilación prepare la aplicacion para cualquier navegador
+	
+Configuracion del proyecto (webpack)
+****************************************
+Se crea un nuevo archivo en la raiz del proyecto llamado webpack.config.js
+Añadimos los elementos
+	path, htmlwebpackplugin
+Se añaden los elementos de la configuracion
+	module.exports
+Se crea el archivo .babelrc donde se añaden las configuraciones que se necesitan para babel
+Agregamos los comandos de React en el package.json
+
+
+Loaders de webpack para css
+********************************
+Instalamos npm i css-loader mini-css-extract-plugin --save-dev
+En el webpack.config se crea una nueva regla para trabajar con css y se instancia el plugin de MiniCssExtractPlugin
+Dentro de la carpeta src se crea la carpeta styles y dentro de esta se crea la carpeta components
+
+
+ESLint, Prettier y Husky
+******************************
+Instalamos ESLint de forma global sudo npm i -g eslint
+Se instala ahora dentro del proyecto con algunos plugines npm i eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+	jsx-a11y es para accesibilidad
+Se crea el archivo de configuracion de ESLint en la raiz llamado .eslintrc
+Instalamos Prettier con npm i prettier eslint-plugin-prettier eslint-config-prettier
+Se crea el archivo de configuracion de Prettier en la raiz llamado .prettierrc
+
+
+Instalar react router
+************************
+npm i react-router-dom --save-dev
+despues de configurar las rutas se debe modificar el webpack para agregar la configuracion que resuleve nuestras rutas
+	Se añade publicPath: '/' en el output del module.exports
+	Se añade también historyApiFallback: true en el devServer
+
+
+Uso de la funcion reducer de ECMAScript 6
+***********************************************
+(la usamos en el contanier de checkout handleSumTotal
+
+Para los que no entiendan la funcion reduce …
+
+Array.prototype.reduce()
+
+The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.
+
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
+
+
+Integrar Paypal
+**********************
+Se debe crear un perfil en Paypal Developer y crear un token sandbox
+instalar react-paypal-button con npm i react-paypal-button --save
+
+
+Google maps
+*****************
+Instalamos npm i @react-google-maps/api --save
+AIzaSyB1g0WZWxDr9as-gAq0Ib5804p1BB0FqNg
+npm i axios --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
