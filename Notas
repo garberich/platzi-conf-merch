@@ -88,12 +88,35 @@ Instalamos npm i @react-google-maps/api --save
 AIzaSyB1g0WZWxDr9as-gAq0Ib5804p1BB0FqNg
 npm i axios --save
 
+Si no usas la API de google por que no posees tarjeta para poder crear la facturación puedes usar esta opción
+
+https://react-leaflet.js.org/
+
+Tambie puedes obtener la lat, lng con esta otra API
+https://positionstack.com/
 
 
-
-
-
-
+Firebase
+************
+Se crea un proyecto en Firebase
+se da click en la pestaña de Hosting y siguen los pasos de Firebase
+	Se instala firebase npm install -g firebase-tools
+	Se logea firebase login
+	Se inicializa firebase init
+		En la inicialización seleccionamos Hosting
+		Se elige la opción de usar un proyecto existente y se selecciona el proyecto de firebase que ya creamos
+		Se ingresa la carpeta dist que es donde tendremos la salida del proyecto
+		Seleccionamos "Si" para sobreescribir las rutas para una single web app
+		Seleccionamos "No" para deploy automáticos a github porque lo vamos a hacer por otra herramienta
+		Seleccionamos "No" para no sobre escribir el archivo de dist/index
+	Subimos los cambios al repositorio para configurar las tareas de github action
+	Recurso para desplegar a github con firebase
+		https://github.com/marketplace/actions/github-action-for-firebase
+	En el proyecto creamos la carpeta .github/workflows y creamos allí el archivo deploy-to-firebase.yml
+		En ese archivo pegamos lo que copiamos del enlace de github anterior
+	Modificamos el archivo yml con los cambios que necesitamos
+	Ejecutamos firebase login:ci para que nos abra el navegador, nos autenticamos y nos genera un token
+	En github vamos a settings-secrets y creamos uno nuevo llamado FIREBASE_TOKEN y pegamos allí el token generado en el paso anterior
 
 
 
