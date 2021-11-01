@@ -134,12 +134,63 @@ se importa Helmet en el contenedor que querramos hacer SEO
 Agregamos Helmet y dentro de este el title y las etiquetas meta que queramos
 
 
+Lighthouse
+****************
+Es una extension de chrome que aparece al inspeccionar la página. Esto analiza la página y nos arroja un reporte
+
+
+Crear API con Strapi
+**************************
+Creamos un proyecto nuevo en otra carpeta con npx create-strapi-app platziconf-backend --quickstart
+Nos crea un proyecto con varios comandos disponibles
+	npm run develop
+	Start Strapi in watch mode.
+
+	npm run start
+	Start Strapi without watch mode.
+
+	npm run build
+	Build Strapi admin panel.
+
+	npm run strapi
+	Display all available commands.
+
+Nos abre el asistente virtual
+Ingresamos los datos personales y asignamos una contraseña
+	Platziconf123*
+Vamos a la opcion "creador de tipos de contenido"
+Crear nuevo tipo de coleccion
+Agregamos los campos y el tipo de cada campo
+Al terminar damos click en Finish y eso reinicia la consola administrativa
+En la opcion de Configuraciones entramos a Roles Y Permisos
+	Elegimos la opcion Public
+	Buscamos el tipo de contenido "Products" que creamos y chequeamos la opcion de buscar(find) y damos click en Guardar
+Buscamos la coleccion de Products y agreganos un nuevo producto
+Cuando terminemos abrimos una nueva pestaña y entramos a http://localhost:1337/products
 
 
 
+**********************************
+ERROR ASYNC AWAIT CON WEBPACK
+**********************************
+instalar 
+	npm install --save @babel/runtime 
+	npm install --save-dev @babel/plugin-transform-runtime
 
 
+And, in .babelrc, add:
 
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+        ["@babel/transform-runtime"]
+    ]
+}
+
+
+**********************
+Se puede desplegar strapi en google cloud
+https://strapi.io/documentation/developer-docs/latest/deployment/google-app-engine.html
 
 
 
